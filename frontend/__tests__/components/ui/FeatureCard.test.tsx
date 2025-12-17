@@ -34,7 +34,7 @@ describe('FeatureCard', () => {
         icon={Star} 
       />
     );
-    // Lucide icons render as SVG
+    
     const svg = document.querySelector('svg');
     expect(svg).toBeInTheDocument();
   });

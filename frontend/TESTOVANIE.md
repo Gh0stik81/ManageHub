@@ -18,7 +18,7 @@ npm run test:coverage
 ## Prehľad testov
 
 ### 1. schemas.test.ts
-📁 [`__tests__/lib/schemas.test.ts`](__tests__/lib/schemas.test.ts)
+[`__tests__/lib/schemas.test.ts`](__tests__/lib/schemas.test.ts)
 
 Testuje validačné schémy formulárov (Zod).
 
@@ -65,7 +65,7 @@ it('should reject mismatched passwords', () => {
 ---
 
 ### 2. storage.test.ts
-📁 [`__tests__/lib/storage.test.ts`](__tests__/lib/storage.test.ts)
+[`__tests__/lib/storage.test.ts`](__tests__/lib/storage.test.ts)
 
 Testuje utility funkcie pre prácu s localStorage a cookies.
 
@@ -124,7 +124,7 @@ it('should store token in localStorage', () => {
 ---
 
 ### 3. utils.test.ts
-📁 [`__tests__/lib/utils.test.ts`](__tests__/lib/utils.test.ts)
+[`__tests__/lib/utils.test.ts`](__tests__/lib/utils.test.ts)
 
 Testuje utility funkciu `cn()` z lib/utils.
 
@@ -136,7 +136,7 @@ Testuje utility funkciu `cn()` z lib/utils.
 ---
 
 ### 4. cn.test.ts
-📁 [`__tests__/utils/cn.test.ts`](__tests__/utils/cn.test.ts)
+[`__tests__/utils/cn.test.ts`](__tests__/utils/cn.test.ts)
 
 Testuje utility funkciu `cn()` z utils/cn (Tailwind merge).
 
@@ -173,7 +173,7 @@ it('should merge conflicting tailwind classes', () => {
 ---
 
 ### 5. seo.test.ts
-📁 [`__tests__/lib/seo.test.ts`](__tests__/lib/seo.test.ts)
+[`__tests__/lib/seo.test.ts`](__tests__/lib/seo.test.ts)
 
 Testuje SEO utility funkcie.
 
@@ -197,7 +197,7 @@ Testuje SEO utility funkcie.
 ---
 
 ### 6. TimePill.test.tsx
-📁 [`__tests__/components/ui/TimePill.test.tsx`](__tests__/components/ui/TimePill.test.tsx)
+[`__tests__/components/ui/TimePill.test.tsx`](__tests__/components/ui/TimePill.test.tsx)
 
 Testuje komponent TimePill (zobrazenie času).
 
@@ -218,7 +218,7 @@ it('should pad single digit with zero', () => {
 ---
 
 ### 7. Alert.test.tsx
-📁 [`__tests__/components/ui/Alert.test.tsx`](__tests__/components/ui/Alert.test.tsx)
+[`__tests__/components/ui/Alert.test.tsx`](__tests__/components/ui/Alert.test.tsx)
 
 Testuje komponent Alert.
 
@@ -231,7 +231,7 @@ Testuje komponent Alert.
 ---
 
 ### 8. PageTitle.test.tsx
-📁 [`__tests__/components/ui/PageTitle.test.tsx`](__tests__/components/ui/PageTitle.test.tsx)
+[`__tests__/components/ui/PageTitle.test.tsx`](__tests__/components/ui/PageTitle.test.tsx)
 
 Testuje komponent PageTitle.
 
@@ -244,7 +244,7 @@ Testuje komponent PageTitle.
 ---
 
 ### 9. FeatureCard.test.tsx
-📁 [`__tests__/components/ui/FeatureCard.test.tsx`](__tests__/components/ui/FeatureCard.test.tsx)
+[`__tests__/components/ui/FeatureCard.test.tsx`](__tests__/components/ui/FeatureCard.test.tsx)
 
 Testuje komponent FeatureCard.
 

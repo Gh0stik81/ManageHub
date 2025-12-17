@@ -1,44 +1,55 @@
-import FeatureCard from "@/components/ui/FeatureCard";
-import { Users, Shield, BarChart3, Smartphone, Zap, Globe } from "lucide-react";
+import { Users, Shield, BarChart3, Smartphone, Zap, Globe, LucideIcon } from "lucide-react";
 
-const features = [
+/**
+ * OPTIMIZATION: Features array moved outside component
+ * - Prevents recreation on every render
+ * - Uses LucideIcon type reference instead of inline JSX
+ * - Array is stable reference (same object identity across renders)
+ */
+interface Feature {
+  IconComponent: LucideIcon;
+  title: string;
+  description: string;
+}
+
+const features: readonly Feature[] = [
   {
-    icon: <Users className="h-6 w-6" />,
+    IconComponent: Users,
     title: "Smart User Management",
     description:
       "Seamlessly manage members, staff, and visitors with role-based access control",
   },
   {
-    icon: <Shield className="h-6 w-6" />,
+    IconComponent: Shield,
     title: "Biometric Security",
     description:
       "Advanced fingerprint and facial recognition for secure workspace access",
   },
   {
-    icon: <BarChart3 className="h-6 w-6" />,
+    IconComponent: BarChart3,
     title: "Real-time Analytics",
     description:
       "Track workspace utilization, member engagement, and revenue insights",
   },
   {
-    icon: <Smartphone className="h-6 w-6" />,
+    IconComponent: Smartphone,
     title: "Mobile-First Design",
     description:
       "Native mobile apps for seamless check-ins and workspace bookings",
   },
   {
-    icon: <Zap className="h-6 w-6" />,
+    IconComponent: Zap,
     title: "Automated Billing",
     description:
       "Flexible subscription models with integrated payment processing",
   },
   {
-    icon: <Globe className="h-6 w-6" />,
+    IconComponent: Globe,
     title: "Blockchain Integration",
     description:
       "Transparent payments and immutable audit logs powered by Stellar",
   },
-];
+] as const;
 
 const FeaturesSection = () => {
   return (
@@ -58,20 +69,23 @@ const FeaturesSection = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group hover:-translate-y-1"
-            >
-              <div className="bg-gradient-to-br from-blue-100 to-teal-100 w-14 h-14 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <div className="text-blue-600">{feature.icon}</div>
+          {features.map((feature, index) => {
+            const Icon = feature.IconComponent;
+            return (
+              <div
+                key={index}
+                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group hover:-translate-y-1"
+              >
+                <div className="bg-gradient-to-br from-blue-100 to-teal-100 w-14 h-14 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <Icon className="h-6 w-6 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600">{feature.description}</p>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                {feature.title}
-              </h3>
-              <p className="text-gray-600">{feature.description}</p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

@@ -1,11 +1,6 @@
-/**
- * Tests for storage utility module
- * Uses MOCKS for localStorage and document.cookie
- */
-
 import { storage } from '@/lib/storage';
 
-// Mock localStorage - TEST DOUBLE (Mock)
+// Mock localStorage
 const localStorageMock = (() => {
   let store: Record<string, string> = {};
   return {
@@ -30,7 +25,7 @@ Object.defineProperty(window, 'localStorage', {
   value: localStorageMock,
 });
 
-// Mock document.cookie - TEST DOUBLE (Mock)
+// Mock document.cookie
 let cookieStore = '';
 Object.defineProperty(document, 'cookie', {
   get: jest.fn(() => cookieStore),
